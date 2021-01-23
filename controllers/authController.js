@@ -5,7 +5,7 @@ const db = require('../models');
 
 const signAsync = util.promisify(jwt.sign);
 
-//
+// login
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
