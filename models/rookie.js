@@ -1,21 +1,21 @@
 module.exports = function (sequelize, DataTypes) {
-    const Payment = sequelize.define('Payment', {
-        cardName: {
+    const Rookie = sequelize.define('Rookie', {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        cardNumber: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        cvc:{
+        age:{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date:{
-            type: DataTypes.DATEONLY,
+        gender:{
+            type: DataTypes.STRING,
             allowNull: false,
         },
     });
-    return Payment;
+    return Rookie;
 };
