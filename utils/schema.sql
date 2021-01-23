@@ -18,6 +18,12 @@ REATE TABLE mentor_table (
 
     );
 
+    CREATE TABLE review_ratings (
+  id INT(10) unsigned NOT NULL AUTO_INCREMENT,
+  helpful INT(1) unsigned NOT NULL,
+  date_entered timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 DROP DATABASE IF EXISTS card_db;
 CREATE DATABASE card_db;
 USE card_db;

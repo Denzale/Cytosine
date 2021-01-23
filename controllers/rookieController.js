@@ -9,3 +9,18 @@ router.get('/', isAuthenticated, function (req, res) {
         .catch(err => res.status(422).json(err));
 });
 
+router.post('/', isAuthenticated, function(req, res) {
+    db.Review.create({
+        UserId: req.user.id,
+        ...req.body
+    })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+});
+
+router.put('/:id', isAuthenticated, function(req, res) {
+    db.Review.update(req.body, { where: { id: req.params.id }})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+});
+module.exports = router;

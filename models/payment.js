@@ -13,6 +13,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         date:{
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
     });
