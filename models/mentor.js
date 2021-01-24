@@ -8,19 +8,19 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        age:{
+        age: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        gender:{
+        gender: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        experince:{
+        experience: {
             type: DataTypes.STRING,
             allowNull: false,
         }
-        
+
     });
     return Mentor;
 };

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/auth';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Login = () => {
     const { login, isLoggedIn } = useAuth();
