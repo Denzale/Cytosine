@@ -1,10 +1,10 @@
 require('dotenv').config();
 
-const cloudinary = require("cloudinary");
+const cloudinary = require('cloudinary');
 
 cloudinary.config({
     // eslint-disable-next-line camelcase
-    cloud_name: "rookieuserimage",
+    cloud_name: 'rookieuserimage',
     // eslint-disable-next-line camelcase
     api_key: process.env.cloudinaryApiKey,
     // eslint-disable-next-line camelcase
