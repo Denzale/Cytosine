@@ -1,5 +1,16 @@
 require('dotenv').config();
 
+const cloudinary = require("cloudinary");
+
+cloudinary.config({
+    // eslint-disable-next-line camelcase
+    cloud_name: "rookieuserimage",
+    // eslint-disable-next-line camelcase
+    api_key: process.env.cloudinaryApiKey,
+    // eslint-disable-next-line camelcase
+    api_secret: process.env.cloudinarySecretKey,
+});
+
 // Configuration check.
 // Disable this at your own risk
 require('./utils/verifyConfiguration')();
@@ -41,7 +52,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
-db.sequelize.sync({force:false}).then(function () {
+db.sequelize.sync({ force: false }).then(function () {
     app.listen(PORT, function () {
         console.log(`Server now on port ${PORT}!`);
     });
