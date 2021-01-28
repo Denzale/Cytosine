@@ -7,7 +7,7 @@ function Mentorjumbo() {
                 to
                 help the rookies with!
             </p>
-            <p>With you provided information we will be able to make a profile for everyone to look at!
+            <p>With your provided information we will be able to make a profile for everyone to look at!
                 </p>
         </div>
     );

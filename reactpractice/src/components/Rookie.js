@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function Mentor() {
+function Rookie() {
     return (
 
         <div className="container">
@@ -98,4 +98,4 @@ function Mentor() {
     );
 }
 
-export default Mentor;
+export default Rookie;
