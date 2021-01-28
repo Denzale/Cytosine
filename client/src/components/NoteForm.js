@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const NoteForm = (props) => {
+const MentorForm = (props) => {
     const { didSubmit } = props;
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -11,7 +11,7 @@ const NoteForm = (props) => {
         submitNote();
     };
     const submitNote = async () => {
-        await axios.post('/api/notes', { title: title, body: body });
+        await axios.post('/api/mentor', { title: title, body: body });
         setBody('');
         setTitle('');
         didSubmit();
@@ -44,4 +44,4 @@ const NoteForm = (props) => {
     );
 };
 
-export default NoteForm;
+export default MentorForm;
