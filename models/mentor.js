@@ -22,5 +22,13 @@ module.exports = function (sequelize, DataTypes) {
         }
 
     });
+
+    Mentor.associate = function (models) {
+        Mentor.hasMany(models.Image, {
+            foreignKey: {
+                allowNull: false,
+            },
+        });
+    };
     return Mentor;
 };
