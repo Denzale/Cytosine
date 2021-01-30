@@ -12,7 +12,13 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Image.associate = function (models) {
-        Image.belongsTo(models.mentor.rookie, {
+        Image.belongsTo(models.Mentor, {
+            foreignKey: {
+                allowNull: false,
+            },
+        });
+
+        Image.belongsTo(models.Rookie, {
             foreignKey: {
                 allowNull: false,
             },

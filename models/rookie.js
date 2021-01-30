@@ -17,5 +17,13 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
     });
+
+    Rookie.associate = function (models) {
+        Rookie.hasMany(models.Image, {
+            foreignKey: {
+                allowNull: false,
+            },
+        });
+    };
     return Rookie;
 };

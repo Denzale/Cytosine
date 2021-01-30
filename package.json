@@ -17,6 +17,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "axios": "^0.21.1",
         "bcryptjs": "2.4.3",
         "bootstrap": "^4.6.0",
         "cloudinary": "^1.23.0",
