@@ -12,4 +12,5 @@ function Rookieform() {
         </div>
     );
 }
+
 export default Rookieform;
