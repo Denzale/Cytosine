@@ -22,5 +22,19 @@ module.exports = function (sequelize, DataTypes) {
         }
 
     });
+
+    
+    Mentor.associate = function (models) {
+        // We're saying that a Mentor should belong to an User
+        // A Mentor can't be created without an User due to the foreign key constraint
+            Mentor.belongsTo(models.User, {
+                foreignKey: {
+                    allowNull: false
+                }
+            });
+        };
+
     return Mentor;
+
+
 };

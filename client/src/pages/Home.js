@@ -1,3 +1,4 @@
+import Thread from './components/Thread.js'
 function Home() {
 
     return (
@@ -5,9 +6,13 @@ function Home() {
             <h2>
                 Home Page
             </h2>
+            <Thread></Thread>
             <p>
                 Welcome Home
             </p>
+            <div> 
+                
+            </div>
         </div>
     );
 }
