@@ -1,6 +1,5 @@
-# Project 3 Starter Kit - Server
+# Rookie Skill
 
-The Project 3 Starter Kit is a highly opinionated, preconfigured MVC-style full-stack application intended to satisfy the stated requirements and additional requirements of Project 3. It comes with a prerolled authentication system, some cleanup from the project 2 starter, and eslint configuration.
 
 ## What this README explains.
 
