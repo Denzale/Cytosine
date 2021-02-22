@@ -1,29 +1,43 @@
-import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 import useAuth from '../hooks/auth';
 
-const Navbar = () => {
-    const { isLoggedIn, logout, getProfile } = useAuth();
+const MainNav = () => {
+    const { isLoggedIn, logout } = useAuth();
+
+    const styles = {
+        navBar: {
+            display: 'flex',
+            justifyContent: 'space-evenly'
+        },
+
+        navDiv: {
+            backgroundColor: '#1a2930',
+            padding: '20px'
+        }
+
+    };
     return (
-        <div>
-            <h3>Navbar</h3>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to='/notes'>Notes</Link></li>
+        <div style={styles.navDiv}>
+            {/* <Navbar bg="dark" variant="dark"> */}
+            <Nav style={styles.navBar} className="mr-auto">
+
+                <Navbar.Brand href="/" style={{ color: '#FFFFFF' }}>Rookie Skill</Navbar.Brand>
+                
+                <Nav.Link href="/profile"><i className="fas fa-user-circle" style={{ color: '#FFFFFF' }}>Profile</i></Nav.Link>
                 {isLoggedIn() ?
                     <>
-                        <li>Hello, {getProfile().email}</li>
-                        <li><Link onClick={() => logout()} to='/'>Logout</Link></li>
+                        <Nav.Link onClick={() => logout()} to='/'><i className="fas fa-sign-out-alt" style={{ color: '#FFFFFF' }}></i></Nav.Link>
                     </>
                     :
                     <>
-                        <li><Link to="/signup">Signup</Link></li>
-                        <li><Link to="/login">Login</Link></li>
+                        {/* <Nav.Link href="/signup">Signup</Nav.Link> */}
+                        <Nav.Link href="/login"><i className="fas fa-sign-out-alt" style={{ color: '#FFFFFF' }}>login</i></Nav.Link>
                     </>
                 }
-                
-            </ul>
+            </Nav>
+            {/* </Navbar> */}
         </div>
     );
 };
 
-export default Navbar;
+export default MainNav;

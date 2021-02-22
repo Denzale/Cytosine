@@ -21,7 +21,7 @@ fs
     .forEach(function(file) {
         // Sequelize 6.0 deprecated import, fixing that.
         const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-        db[model.name] = model;
+        db[model.Name] = model;
     });
 
 Object.keys(db).forEach(function(modelName) {
