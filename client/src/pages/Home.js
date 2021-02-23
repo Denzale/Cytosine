@@ -1,21 +1,26 @@
+const { default: MentorTable } = require('../components/MentorTable');
 
 
-function Home() {
+function Home({ name }) {
 
     return (
         <div>
             <h2>
-                Home Page
+                Welcome {name}
             </h2>
             <p>
-                Welcome Home
+                <MentorTable></MentorTable>
             </p>
-            <div> 
+            <div>
 
             </div>
         </div>
     );
 }
 
+Home.defaultProps = {
+    name: 'Denzale'
+
+};
 export default Home;
 

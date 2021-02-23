@@ -8,7 +8,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Notes from './pages/Notes';
 
-
 function App() {
     // Pull auth token from storage, in case you refresh the page
     const { getToken, logout } = useAuth();
